@@ -1,0 +1,21 @@
+.mixin (@a) when (lightness(@a) >= 50%){
+	background-color: black;
+}
+.mixin (@a) when (lightness(@a) < 50%){
+	background-color:white;
+}
+.mixin (@a) {
+	color: @a;
+}
+div{
+	width:200px;
+	height:200px;
+	margin:10px;
+	text-align:center;
+}
+.class1{
+	.mixin(#ddd);
+}
+.class2{
+	.mixin(#555);
+}

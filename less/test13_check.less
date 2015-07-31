@@ -1,0 +1,16 @@
+.mixin (@a, @b:0) when (isnumber(@b)) and (@b > 0){
+	width:@a;
+	height:@b;
+}
+.mixin (@a, @b: black) when (iscolor(@b)){
+	width:@a;
+	height:200px;
+	color:@b;
+}
+.mixin(@a,@b) when (isnumber(@a)){
+	background:blue;
+}
+.check{	
+	.mixin(200px, green);
+	border:1px solid black;
+}

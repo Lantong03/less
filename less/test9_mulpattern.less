@@ -1,0 +1,14 @@
+/*可以匹配多个参数*/
+.mixin(@a){
+	background: @a;
+}
+.mixin(@a, @b){
+	background: -webkit-linear-gradient(left,@a, @b);
+}
+.mulpattern{
+	width:200px;
+	height:200px;
+	margin:10px;
+	text-align:center;
+	.mixin(#66bbcc,#aaccdd);
+}

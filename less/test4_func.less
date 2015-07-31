@@ -1,0 +1,20 @@
+@the-border:1px;
+@base-color:#111;
+@red:#842210;
+div{
+	width:200px;
+	height:200px;
+	margin:10px;
+}
+#header{
+	color:@base-color * 3;
+	border-left:@the-border solid black;
+	border-right:@the-border*2 solid black;
+	border-color:black;
+}
+#footer{
+	color:@base-color + #003300;
+	border-color:desaturate(@red, 10%);
+	border-width:@the-border;
+	border-style:solid;
+}

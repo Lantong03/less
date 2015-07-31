@@ -1,0 +1,28 @@
+@var:red;
+#page{
+	@var: green;
+	#header{
+		color: @var;
+	}
+}
+#footer{
+	color: @var;
+}
+//字符串插值
+@base-url:"http://assets.fnord.com";
+.img{
+	background-image:url("@{base-url}/images/bg.png");
+}
+//免编译
+.class{
+	filter:~"ms:alwaysHasItsOwnSyntax.For.Stuff()";
+}
+//JavaScript表达式
+@var:`"hello".toUpperCase()+"!"`;
+
+@str:"helloworld zsdasd";
+@str2:"xiaomi";
+@var1:`@{str}.toUpperCase()+@{str2}`;
+.var1{
+	color: @var1
+}

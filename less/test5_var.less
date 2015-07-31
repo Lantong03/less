@@ -1,0 +1,10 @@
+@nice-blue:#5B83AD;
+@light-blue:@nice-blue + #111;
+@fnord:"I am fnord";
+@var:fnord;
+#header{
+	color:@light-blue;
+}
+#header:before{
+	content:@@var;
+}

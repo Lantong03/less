@@ -1,0 +1,15 @@
+.truth (@a) when (@a){
+	color:blue;
+}
+.truth (@a) when (@a = true){
+	color:green;
+}
+.mixin (@a) when (@a > 40), (@a < 20){
+	border:1px solid black;
+}
+.class{
+	.truth(true);
+	width:200px;
+	height:200px;
+	.mixin(10);
+}

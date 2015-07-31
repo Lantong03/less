@@ -1,0 +1,14 @@
+@switch:light;/*.mixin根据不同的@switch值而表现各异*/
+.mixin(dark, @color){
+	color:darken(@color, 10%);
+}
+.mixin(light, @color){
+	color:lighten(@color, 10%);
+}
+.mixin(@_, @color){
+	display:block;
+}
+.pattern{
+	.mixin(@switch, #888);
+	margin:10px;
+}

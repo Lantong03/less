@@ -1,0 +1,18 @@
+@media: mobile;
+.mixin (@a) when (@media = mobile){
+	height:200px;
+}
+.mixin (@a) when (@media = desktop){
+	height:500px;
+}
+.max (@a, @b) when (@a > @b){
+	width:@a;
+}
+.max (@a, @b) when (@a < @b){
+	width:@b;
+}
+.box{
+	.mixin(@media);
+	.max(200px, 100px);
+	border:1px solid black;
+}
